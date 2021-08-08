@@ -1,0 +1,15 @@
+.container{
+    display: grid; /*Al indicar display grid, se nos permite hacer uso de grid-template-columns y grid-template-rows*/
+    grid-template-columns: 200px 100px 300px 200px 200px; /*Para indicar las medidas de cada columna*/
+    grid-template-rows: 200px 200px; /*Para indicar cuanto tiene de alto mi fila, al poner 200px se modifica el height del item, para la siguiente fila, se haría lo siguiente como con el grid-template-columns, poniendo mas valores, como 200px 100px 300px, ojo no se ponen comas en cada valor*/
+
+}
+
+.item{
+    border: 5px solid red;
+    counter-increment: item; 
+}
+
+.item::before{
+    content: counter(item);
+}
