@@ -1,13 +1,10 @@
 .container{
-    display: grid; /*Al indicar display grid, se nos permite hacer uso de grid-template-columns y grid-template-rows*/
-     /*grid-template-columns: 1fr 1fr 1fr;Es mas ventajoso usar fr, en lugar de auto, o porcentajes, aya que estos se rompen miy rapido al cambiar el contenido, o al añadir gap, margenes o padding. al usar fr se mantiene la proporcionalidad, si se prente usar porcentaje tener en cuenta lo que añade el gap*/
-    grid-template-columns: repeat(3, 1fr); /*Para no poner 1fr 1fr 1fr, esto donde el primer valor es la cantidad de veces y segundo la medida*/
-    grid-template-columns: repeat(3, minmax(200px, 300px)); /*o usar minmax para establecer un rago de valores como segundo parametro para repeat minmax(minimo, maximo), esto hará que no se achiquen a menos de 200px o se agranden a más de 300px*/   
-    grid-template-columns: repeat(3, minmax(200px, 1fr)); /*con minmax(minimo, maximo), igual se pude usar fr*/    
-    grid-template-columns: repeat(auto-fill, minmax(200px, 300px)); /*auto fill, se rellena todo el espacio que resta con las condiciones que indica el repeat*/   
+    display: grid;  
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 300px));    */
+    /* grid-template-rows: repeat(auto-fill, minmax(200px, 300px));       */
+    grid-auto-columns: repeat(200px 1fr); 
+    grid-auto-rows: 200px; /*Para que no se vaya generando filas implicitas*/
 
-    grid-template-rows: [inicioFila] 1fr 200px 100px [finFila5]; 
-    grid-template-rows: repeat(auto-fill, minmax(200px, 300px)); /*auto fill, se rellena todo el espacio que resta con las condiciones que indica el repeat*/      
     gap: 1rem;
     block-size: 100vh;
     max-inline-size: 1024px; /*max-width*/
