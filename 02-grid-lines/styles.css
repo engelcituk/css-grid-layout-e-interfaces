@@ -1,0 +1,31 @@
+.container{
+    display: grid; /*Al indicar display grid, se nos permite hacer uso de grid-template-columns y grid-template-rows*/
+    grid-template-columns: [inicioColumna] 200px 100px 300px 200px 200px[finColumna]; /*Para indicar las medidas de cada columna, cada valor tiene un nombre y estos se pueden cambiar por un o propio usar los que tiene como defecto que son 1 2 3 4 5, se antenponen antes de cada valor (200px)*/
+    grid-template-rows: [inicioFila] 200px 200px; /*Para indicar cuanto tiene de alto mi fila, al poner 200px se modifica el height del item, para la siguiente fila, se haría lo siguiente como con el grid-template-columns, poniendo mas valores, como 200px 100px 300px, ojo no se ponen comas en cada valor*/
+
+    /* grid-template-rows: [inicioFila] 200px 200px; Sí se va generando más filas y no se indica su altura, estos van tomando el valor que su contenido genere */
+}
+
+.item{
+    border: 5px solid red;
+    counter-increment: item; 
+}
+
+.item::before{
+    content: counter(item);
+}
+
+/*Tomamos el cuarto elemento y modificamos su posición*/
+.item:nth-of-type(4){
+    border-color: blue;
+    grid-column-start: inicioColumna; /*que se posicione en donde esta inicioColumna, el nombre que yo le puse, en base a las columnas*/
+    grid-column-end: 4; /*Y que termine hasta la columna posicion 4, un valor que está ahi por defecto, no cambió como el que se llama inicioColumna*/
+    grid-column-end: finColumna; /*la ultima columna y su alias, otroa manera es poner -1, para indicar la  ultima columan*/
+    grid-column-end: -1; /*Esto de la ultima columna se pone -1, si se da el caso de no saber cuantas columnas se tiene*/
+
+    
+
+    grid-row-start: inicioFila;/*Si requiere que se mueva en el inicio de la fila, se usa grid-row-start y la posicion respecta*/
+    grid-row-end: 3;/*valor donde se quiere que la fila termine*/
+
+}

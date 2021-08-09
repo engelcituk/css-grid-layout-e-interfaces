@@ -1,0 +1,25 @@
+.container{
+    display: grid; /*Al indicar display grid, se nos permite hacer uso de grid-template-columns y grid-template-rows*/
+    grid-template-columns: [inicioColumna] 200px 500px [finColumna]; /*Para indicar las medidas de cada columna, cada valor tiene un nombre y estos se pueden cambiar por un o propio usar los que tiene como defecto que son 1 2 3 4 5, se antenponen antes de cada valor (200px)*/
+    grid-template-rows: [inicioFila] 200px 600px; /*Para indicar cuanto tiene de alto mi fila, al poner 200px se modifica el height del item, para la siguiente fila, se haría lo siguiente como con el grid-template-columns, poniendo mas valores, como 200px 100px 300px, ojo no se ponen comas en cada valor*/
+
+    /* grid-template-rows: [inicioFila] 200px 200px; Sí se va generando más filas y no se indica su altura, estos van tomando el valor que su contenido genere */
+}
+
+.item{
+    border: 5px solid red;
+    counter-increment: item; 
+}
+
+.item::before{
+    content: counter(item);
+}
+
+/*Tomamos el primer elemento y modificamos su posición*/
+.item:nth-of-type(1){
+    border-color: blue;
+    grid-column-start: inicioColumna; /*Aranque en la primera columna y termine en la columna final*/
+    grid-column-end: finColumna;/*o con -1*/
+    /*grid-column-start y grid-column-end se pueden resumir en  grid-column*/
+    grid-column: inicioColumna / finColumna; /*o los mismo con: grid-column: 1 / -1;  */
+}
