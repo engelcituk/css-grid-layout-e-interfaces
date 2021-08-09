@@ -1,0 +1,44 @@
+.container{
+    display: grid; /*Al indicar display grid, se nos permite hacer uso de grid-template-columns y grid-template-rows*/
+    grid-template-columns: [inicioColumna] 200px 700px [finColumna]; /*Para indicar las medidas de cada columna, cada valor tiene un nombre y estos se pueden cambiar por un o propio usar los que tiene como defecto que son 1 2 3 4 5, se antenponen antes de cada valor (200px)*/
+    grid-template-rows: [inicioFila] 200px 600px 200px [finFila]; /*Para indicar cuanto tiene de alto mi fila, al poner 200px se modifica el height del item, para la siguiente fila, se haría lo siguiente como con el grid-template-columns, poniendo mas valores, como 200px 100px 300px, ojo no se ponen comas en cada valor*/
+    /* grid-template-rows: [inicioFila] 200px 200px; Sí se va generando más filas y no se indica su altura, estos van tomando el valor que su contenido genere */
+    grid-template-areas: "header header" "sidebar main" "footer footer";/*"header header" indica que se ocupa un segundo espacio o 2 columnas, para poner otro elementos en una siguiente fila se pone un espacio y entre comillas el otro elemento "sidebar main, esto para que funcione, deben ser consumidos"*/    
+     gap: 10px;/* establece un espaciado entre todos los grid items */
+
+    /*
+    row-gap: 10x; Espaciado entre solo filas
+    column-gap: 10x;   Espaciado entre solo columnas 
+    
+    */
+
+}
+
+.item{
+    border: 5px solid red;
+    counter-increment: item; 
+}
+
+.item::before{
+    content: counter(item);
+}
+
+/*Tomamos el primer elemento y modificamos su posición*/
+.item:nth-of-type(1){
+    grid-area: header;
+}
+
+.item:nth-of-type(2){
+    border-color: blue;
+    grid-area: sidebar;
+}
+.item:nth-of-type(3){
+    border-color: green;
+    grid-area: main; /*no es necesario indicar este porque ya lo toma por defecto debido a lo realizado en los pseudoselectores anterioes*/
+}
+
+.item:nth-of-type(4){
+    border-color: purple;
+    grid-area: footer;
+    margin-block-start: 20px; /*magin top*/
+}
