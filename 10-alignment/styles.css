@@ -1,0 +1,71 @@
+.container{
+    border: 5px solid brown;
+    display: grid;  
+    /* grid-template-columns: repeat(auto-fill, minmax(100px, 200px));    */
+    /* grid-template-rows: repeat(auto-fill, 200px);     */
+    grid-auto-rows: 200px; /*Para que no se vaya generando filas implicitas*/
+    grid-template-columns: repeat(6, 200px); /*Para que no se vaya generando filas implicitas*/
+
+    /* gap: 2rem; */
+    block-size: 100vh;
+    /* max-inline-size: 1024px; max-width */
+    margin: auto;/*centrar*/
+    /* grid-auto-flow: column; */
+    /* grid-auto-flow: column; */
+    /* grid-auto-flow: column dense; */
+    /* grid-auto-flow: column; */
+
+    /* align-items:center; */
+    /* align-content: center; */
+
+    /* justify-items:center; */
+    /* justify-content:space-evenly; */
+
+    /*Versión resumida de los anteriores  */
+    /* place-items: center; */
+    place-content:center space-evenly;
+}
+
+.item{
+    border: 5px solid red;
+    counter-increment: item; 
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* 
+    align-self: ;
+    justify-self: ; */
+    /* place-self:; */
+}
+
+.item::before{
+    content: counter(item);
+}
+
+/*Para cambiar su ubicación en el grid*/
+.item:nth-child(3){
+    border-color: green;
+    
+    
+}
+.item:nth-child(4){
+    border-color: purple;
+    /* align-self: center;
+    justify-self: center; */
+    place-self: center; /*short-cut de las propiedades anteriores*/
+
+}
+/*
+
+Alineación
+    Podemos alinear los elemento dentro de un grid por grupo o de manera independiente: propiedades como justify-content y align-items y a ellas se les sumará justify-items 
+        justify-content
+        justify-items
+        align-items
+        place-items
+        justify-self
+        align-self
+        place-self
+*/
