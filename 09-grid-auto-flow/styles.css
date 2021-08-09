@@ -1,0 +1,61 @@
+.container{
+    display: grid;  
+    grid-template-columns: repeat(auto-fill, minmax(100px, 200px));   
+    grid-template-rows: repeat(auto-fill, 200px);    
+    /* grid-auto-rows: 200px; Para que no se vaya generando filas implicitas */
+    gap: 2rem;
+    block-size: 100vh;
+    max-inline-size: 1024px; /*max-width*/
+    margin: auto;/*centrar*/
+    /* grid-auto-flow: column; */
+    grid-auto-flow: row dense;
+    /* grid-auto-flow: column dense; */
+    /* grid-auto-flow: column; */
+
+    
+
+    
+}
+
+.item{
+    border: 5px solid red;
+    counter-increment: item; 
+    display: flex;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.item::before{
+    content: counter(item);
+}
+
+/*Para cambiar su ubicación en el grid*/
+.item:nth-child(3){
+    border-color: green;
+    grid-row-start: 2; /*le indico que columna ponerse*/
+    grid-row-end: 4; /*le indico que columna ponerse*/
+    grid-column-end: span 2;
+    /* grid-column-start: 1; */
+    
+}
+.item:nth-child(4){
+    border-color: purple;
+    grid-row-start:  1; 
+    grid-column-start: 2; 
+    /* grid-row-end: span 2; */
+    /* grid-column-end: span 2; */
+    grid-row-end: span 2;
+
+
+}
+/*
+Cambio de flujo y posicionamiento automático
+    Normalmente los grid-items van llenando una fila para pasar a la siguiente, pero podemos cambiar este flujo, además de rellenar espacios que dejaron elementos que movimos con grid-row-start o grid-column-start
+    grid-auto-flow
+    row (defecto)
+    column
+    row dense
+    column dense
+*/
