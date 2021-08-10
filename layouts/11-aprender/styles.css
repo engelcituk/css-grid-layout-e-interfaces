@@ -1,0 +1,39 @@
+.lesson{
+    font-family: Arial, Helvetica, sans-serif;
+    border: 5px solid red;
+    display: grid;
+    grid-template-columns: 8.75rem 1fr; /*Dos columnas que ocupan dos espacios 8.75rem 1fr*/
+    grid-template-areas: "thumb title" "description description";/*En la primera línea tendré (thumb title), en la segunda linea se va tener el description en la primera columna y el mismo en la segunda columna ("description description")  */
+}
+
+.lesson-thumb{
+    grid-area: thumb;
+    border: 5px solid black;
+}
+
+.lesson-thumb img {
+    width: 100%;
+    vertical-align: middle; /*Esto elimina el margen que se pone en la parte inferior*/
+    aspect-ratio: 16/9; /*Escala la imagen*/
+    object-fit: cover; /*ajusta la imagen para que no se vea tan desproporcionado*/
+}
+.lesson-title {
+    grid-area: title;
+    border: 5px solid yellow;
+    margin: 0;
+}
+
+.lesson-description {
+    grid-area: description;
+    border: 5px solid purple;
+    margin: 0;
+}
+
+@media (min-width: 768px){
+    .lesson{
+        grid-template-columns: 300px 1fr; /*Dos columnas que ocupan dos espacios 300px y una fraccion*/
+        /*grid-template-rows se puede ocupar para controlar las filas*/
+        grid-template-rows: auto 1fr; /*Sí quiero que mi título ocupe solamente el tamaño de su contenido y la descripción ocupe el resto del tamaño-> auto 1fr*/
+        grid-template-areas: "thumb title" "thumb description"; /*en la primera linea tendré thumb y title, en la segunda linea thumb y description*/
+    }
+}
