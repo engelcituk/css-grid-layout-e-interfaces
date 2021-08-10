@@ -37,3 +37,5 @@
         grid-template-areas: "thumb title" "thumb description"; /*en la primera linea tendré thumb y title, en la segunda linea thumb y description*/
     }
 }
+
+/* Este layout es imposible sin duplicar DOM excepto usando los poderes de Grid Layout. */

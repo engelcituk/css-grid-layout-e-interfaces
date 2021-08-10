@@ -1,0 +1,38 @@
+/*Si el input con atrbuto id list esta checkeado, aplicar border rojo al hermano que esté a su mismo nivel*/
+input[id="list"]:checked ~ .project-list{
+    border: 1px solid red;
+}
+
+/*Si el input con atrbuto id grid esta checkeado, aplicar border rojo al hermano que esté a su mismo nivel*/
+input[id="grid"]:checked ~ .project-list{
+    border: 1px solid blue;
+}
+
+.project-actions{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*Si el input con atrbuto id list esta checkeado, tomar a su hermano project-actions y en su atributo for cambiar el color de su label, mismo caso si lo checkeado sea el input con id grid*/
+input[id="list"]:checked ~ .project-actions [for="list"],
+input[id="grid"]:checked ~ .project-actions [for="grid"] {
+    background: red;
+}
+
+input{
+    display: none;
+}
+body{
+    font-family: sans-serif;
+}
+label{
+    border: 1px solid red;
+    cursor: pointer;
+    user-select: none;
+    padding: 1rem;
+}
+/*
+Portada de Figma - parte 1
+La portada de Figma tiene una opción para organizar proyectos en filas o columnas. En esta clase creamos el switch que hace el cambio entre interfaces.
+
+Comentarios */
