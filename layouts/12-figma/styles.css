@@ -1,11 +1,52 @@
 /*Si el input con atrbuto id list esta checkeado, aplicar border rojo al hermano que esté a su mismo nivel*/
 input[id="list"]:checked ~ .project-list{
-    border: 1px solid red;
+    border: 5px solid green;
 }
 
+input[id="list"]:checked ~ .project-list .project{
+    border: 5px solid red;
+    display: grid;
+    grid-template-columns: 50px 1fr 100px 100px;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+}
+input[id="list"]:checked ~ .project-list .project img{
+    inline-size: 50px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+
 /*Si el input con atrbuto id grid esta checkeado, aplicar border rojo al hermano que esté a su mismo nivel*/
-input[id="grid"]:checked ~ .project-list{
-    border: 1px solid blue;
+input[id="grid"]:checked ~ .project-list {
+    border: 5px solid red;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+input[id="grid"]:checked ~ .project-list .project{
+    border: 5px solid green;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 1fr auto auto;
+    /* align-items: center; */
+}
+
+input[id="grid"]:checked ~ .project-list .project img{
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;  
+    /* grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 1;
+    grid-column-end: -1; */
+    grid-area: 1/1/1/-1;
+}
+
+.project-list{
+    padding: 1rem;
 }
 
 .project-actions{
@@ -32,7 +73,10 @@ label{
     padding: 1rem;
 }
 /*
-Portada de Figma - parte 1
-La portada de Figma tiene una opción para organizar proyectos en filas o columnas. En esta clase creamos el switch que hace el cambio entre interfaces.
+Portada de Figma - parte 2
 
-Comentarios */
+La portada de Figma tiene una opción para organizar proyectos en filas o columnas. En esta clase creamos el grid que compone la interfaz.
+
+La propiedad grid-area, sintaxis de grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end;
+
+*/
