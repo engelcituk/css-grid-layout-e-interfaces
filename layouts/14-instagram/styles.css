@@ -1,0 +1,34 @@
+
+.wrapper{
+    margin: auto; /*Para centrar, pero solo funciona hasta poner una medida (widh) al layout (max-inline-size: 935px;)*/
+    max-inline-size: 935px;
+    border: 1px solid red;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.75rem;
+}
+
+.post {
+    border: 1px solid blue;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.post img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover; /*Escala la imagen para que no se vea una distorsion fea*/
+}
+
+@media (max-width: 735px){
+    .grid{
+        gap: 3px;
+    }
+}
+/* 
+Instagram
+Es de esos layouts más intuitivos, pero lleva trucos por dentro para mantener siempre la proporción.
+*/
