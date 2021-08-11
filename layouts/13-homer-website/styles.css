@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    background-color: #78bbcb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    block-size: 100vh; /*EL heigh todo el ancho del view port*/
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(6, 100px); 
+    border: 3px solid black;
+    /* justify-content: center; */
+}
+.grid img {
+    max-inline-size: 100%; /*Para que la img no se salga de su celda*/
+    box-sizing: border-box; /*Para que el border se considerado como si fuera parte la img y no se desborde de la celda*/
+}
+.god {
+    border: 3px solid green;
+    grid-row-start: 2;
+    /* grid-column-start: 3;
+    grid-column-end: 5; */
+    grid-column: 3/5;
+}
+
+.mouth {
+    border: 3px solid blue;
+    grid-column-start: 5;
+    grid-row-start: 4;
+}
+
+.bell {
+    border: 3px solid black;
+    grid-row-start: 4;
+
+}
+
+.clock {
+    border: 3px solid yellow;
+    grid-row-start: 4;
+    grid-column-start: 2;
+}
+
+.toaster{
+    border: 3px solid purple;
+    grid-column-start: 1; /*podemos quitar esto y funcionará, a menos que se posicione algo en esta posición*/
+    grid-row-start: 2;
+}
+
+.worm {
+    border: 3px solid brown;
+    grid-column-start: 6; 
+    grid-row-start: 3;
+}
+
+
+
+
+
+/*
+El sitio web de homero
+Resolvamos este layout solo por las risas, la lección real es que sin Grid Layout seguro lo más probable sería usando posiciones absolutas.
+
+*/
