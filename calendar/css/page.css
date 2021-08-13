@@ -1,0 +1,23 @@
+.page{
+    display: grid;
+    grid-template-columns: 16.25rem 1fr; /*Dos columnas*/
+    grid-template-rows: 6rem 1fr; /*Dos filas*/
+    grid-template-areas: "header header" "sidebar calendar";/*primer fila ocupa las dos columas, siguiente fila ocupado por el sidebar y el calendar*/
+    block-size: 100vh; /*altura 100% del viewport*/
+
+}
+
+.page .header {
+    border: 3px solid blue;
+    grid-area: header;
+}
+
+.page .sidebar {
+    grid-area: sidebar;
+    border: 3px solid yellow;
+}
+
+.page .calendar {
+    border: 3px solid purple;
+    grid-area: calendar;
+}
