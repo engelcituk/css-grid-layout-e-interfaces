@@ -1,0 +1,24 @@
+.calendar{
+    color:var(--gray20);
+    padding-inline-start:1.5rem; /*padding izq*/
+    padding-inline-end:1.5rem; /*padding derecho*/
+    --minBlockSize: 4rem;/*Medida minima de alto del bloque, o height, 4rem*/
+    --maxBlockSize: auto;/*Medida maxima de alto del bloque, o height, auto*/
+    --minInlineSize: 5rem;/*Medida mínima de ancho del bloque, o width, 10rem*/
+    --maxInlineSize: 10rem;/*Medida maxima de ancho del bloque, o width, 5rem*/
+
+}
+
+.calendar-week {
+    display: grid;
+    /*Ocho columnas, la primera es de medidad automatica(no se nota de inicio hasta tener contenido), 7 entre un rango minimo de 5rem a 10rem*/
+    grid-template-columns: auto repeat(7, minmax( var(--minInlineSize), var(--maxInlineSize) ) );
+    /*25 filas, La primera fila mide 7rem, 24 filas miden entre un rango minimo de (4 rem a auto)*/
+    grid-template-rows: 7rem repeat( 24, minmax( var(--minBlockSize), var(--maxBlockSize) ) );
+    min-block-size: 700px; /*minimamente para que el calendario se pueda ver bien*/
+}
+
+/*
+Grid del calendario principal
+El componente principal de nuestro proyecto inicia con un grid donde practicaremos todo lo aprendido previamente e iremos dejando el campo listo para agregar el resto de componentes.
+*/
