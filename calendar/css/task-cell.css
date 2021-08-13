@@ -1,0 +1,23 @@
+.taskCell{
+    /*border-left y border-bottom*/
+    border-inline-start: 1px solid currentColor; /* currentColor toma el ultimo color heredado, en este caso la momento sería --gray20*/
+    border-block-end: 1px solid currentColor; /* currentColor toma el ultimo color heredado, en este caso la momento sería --gray20*/
+    padding: .25rem;
+}
+
+/*en cada 8 elementos de la clase taskCell poner su borde derecho*/
+.taskCell:nth-child(8n){
+    border-inline-end: 1px solid currentColor; /* currentColor toma el ultimo color heredado, en este caso la momento sería --gray20*/
+}
+
+/*Si taskCell tiene la clase is-active, le agrego algo a su pseudoelememnto before*/
+.taskCell.is-active::before{
+    content: '(Sín Titulo)';
+    font-size:small;
+    background: #c6dafb;
+    padding: .25rem;
+    margin-block-start: 1rem;
+    display: block; /*Lo vuelvo bloque y así ocupará toda la celda*/
+    border-radius: .25rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3)/*0 en el eje x, 0 en el eje y, spread de 10px y de color negra con opacidad del 30%*/
+}

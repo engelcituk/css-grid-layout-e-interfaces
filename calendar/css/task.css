@@ -1,0 +1,23 @@
+.task {
+    /* border: 1px solid red; */
+    background: var(--blue10);
+    color: var(--white);
+    border-radius: .25rem;
+    /* padding-inline-end: 1rem;
+    padding-inline-start: 1rem; */
+    /* padding-block-start: 10px;
+    padding-block-end: 10px; */
+    padding-inline: 1rem;
+    padding-block: .625rem;
+    overflow: hidden; /*El parrafo en task hace que se desborde, por lo que lo ocultamos*/
+    font: var(--body2-medium);
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;/*4px*/
+}
+
+/*Le quito los margenes a los parrafos en task margin: 0;, igual para mantener un parrafo en su misma linea, si tiene dos palabras que esta no baje de la linea white-space: nowrap;*/
+.task p {
+    margin: 0;
+    white-space: nowrap;
+}
