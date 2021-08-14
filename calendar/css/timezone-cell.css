@@ -1,0 +1,22 @@
+.timezoneCell {
+    /* border: 1px solid red;  */
+    font: var(--body3-regular);
+    position: sticky; /*Para que se mantenga fijo, esto permite usar inset-block-start:0; equivalente a top:0; y poder usar position absolute en .timezoneCell::before*/
+    inset-block-start:0; /*inset-block-start:0; equivalente a top:0; */
+    display: flex;
+    justify-content: flex-end; /*Para ubicarlo al final*/
+    align-items: flex-end; /*Para ubicarlo al final*/
+    padding-inline-end: 1rem;
+    white-space: nowrap; /*Para que el texto no rompa y se vaya la siguiente lìnea*/
+}
+
+/*Pseudo elemento para agregar un guioncito a la celda*/
+.timezoneCell::before {
+    content: '';
+    inline-size: .5rem;/*Ancho*/
+    block-size: 1px; /*altura*/
+    background-color: var(--gray20);
+    position: absolute;
+    inset-inline-end:0; /*Hacìa la derecha, al final*/
+    inset-block-end:0; 
+}
