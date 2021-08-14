@@ -7,7 +7,7 @@
 
 /*en cada 8 elementos de la clase taskCell poner su borde derecho*/
 .taskCell:nth-child(8n){
-    border-inline-end: 1px solid currentColor; /* currentColor toma el ultimo color heredado, en este caso la momento sería --gray20*/
+    /*  border-inline-end: 1px solid currentColor; currentColor toma el ultimo color heredado, en este caso la momento sería --gray20*/
 }
 
 /*Si taskCell tiene la clase is-active, le agrego algo a su pseudoelememnto before*/

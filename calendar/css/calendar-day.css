@@ -1,0 +1,72 @@
+.calendarDay{
+    /* border: 1px solid red; */
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; /*Si solamente voy a alinear contenido y no contenedores, ocupo text-align, si fuera contenedores sería align-items: center*/
+    margin: 0;
+    position: sticky;/*Se pudo usar relative Para poder ocupar el position absolute en .calendarDay::before, pero se ocupa sticky para que este nos persiga al hacer scroll, sticky permite el uso de inset-block-start:0; equivalente a top:0; */
+    inset-block-start:0;
+    background: var(--white);/*AL hacer scroll y al tener un fondo, se ve el fondo blanco, sino se vería solo los bordes de la cuadricula */
+    border-block-end:1px solid currentColor;
+}
+
+.calendarDay a {
+    /* border: 1px solid red; */
+    text-decoration: none;
+    color: currentColor;
+    outline: none; /*Al asegurar el estilo del focus y del hover, se procede a quitar el outline al tag a*/
+}
+
+/*Para ponerle estilos al ancla cuando sea hover/focus se le aplican al span 2, que es donde se tiene los numeros del mes (dia)*/
+.calendarDay a:hover span:nth-of-type(2),
+.calendarDay a:focus span:nth-of-type(2)  {
+    background: var(--gray10);
+    /* font: var(--subtitle-subtitle1); */
+}
+/*Para ponerle estilos al ancla si tiene la clase is-selected cuando sea hover/focus se le aplican al span 2, que es donde se tiene los numeros del mes (dia)*/
+.calendarDay.is-selected a:hover span:nth-of-type(2),
+.calendarDay.is-selected a:focus span:nth-of-type(2)  {
+    background: var(--blue30);
+    /* font: var(--subtitle-subtitle1); */
+}
+
+
+/*Pseudo clase, selecciono span, contiene el nombre del día*/
+.calendarDay span:nth-of-type(1){
+    font: var(--body1-regular);
+}
+/*Pseudo clase, selecciono span que contiene el valor del día, elemento inline, se convierte en inline-bloque para que pueda tomar el inline-size: 2.75rem; */
+.calendarDay span:nth-of-type(2){
+    font: var(--subtitle-subtitle1);
+    line-height: 2.75rem; /*Alto de la linea igual al alto de todo el elemento*/
+    inline-size: 2.75rem; /*Ancho/width*/
+    display: inline-block;
+    border-radius: 50%;
+}
+/*Pseudo elemento para agregar un bordecito*/
+.calendarDay::before{
+    content: '';
+    inline-size: 1px;
+    block-size: 2rem;
+    background-color: currentColor;
+    position: absolute;
+    inset-block-end: 0; /*left, equivalente logico*/
+    inset-inline-start: 0; /*bottom, equivalente logico*/
+}
+
+/* si la clase .calendarDay igual tiene la clase .is-selected y a su vez vamos al span que tenga :nth-of-type(1), que es el nombre del día y le cambiamos el color*/
+.calendarDay.is-selected span:nth-of-type(1){
+    color: var(--blue10);
+}
+
+/* si la clase .calendarDay igual tiene la clase .is-selected y a su vez vamos al span que tenga :nth-of-type(2), que es donde se tiene el ancla como botón redondo, y le cambiamos su background*/
+.calendarDay.is-selected span:nth-of-type(2){
+    background: var(--blue10);
+    color: var(--white);
+}
+
+/*
+Cabeceras de fecha
+Vamos a ubicar los días de la semana y también personalizamos los estilos de focus para una mejor navegación.
+*/
