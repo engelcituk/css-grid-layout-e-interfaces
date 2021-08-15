@@ -1,0 +1,29 @@
+.hourCell{
+    /* border: 1px solid red; */
+    /*align-self: start; /*Para mover el grid item arriba
+    justify-self: end; Para mover el grid item a la derecha*/
+    place-self: start end; /* propidad resumida start para arrancar arriba, end para moverse a la derecha de align-self: start; y justify-self: end;*/
+    transform: translateY(-50%); /*Mueve el contenido en el eje Y, de acuerdo al alto del elemento dentro del grid item, osea solo el texto, si se tomara en cuenta con una position relative no funcionaría, porque lo que movería sería el grid item*/
+    font: var(--body3-regular);
+    padding-inline-end: 1rem; /*Padding right logico*/
+    position: relative; /*Para poder usarlo en el pseudoelemento que añade una rayita en el eje principal*/
+
+}
+
+/*
+Pseudoelemento para poner una rayita en el eje principal
+*/
+.hourCell::before{
+    content: '';
+    inline-size: .5rem;/*width*/
+    block-size: 1px; /*Height*/
+    background: currentColor;
+    position: absolute; /*Esto hace que la rayita se aparezca, sino debido a que content no tienen valor no se ve*/
+    inset-inline-end:0; /*Con esto lo muevo al derecha o final del eje principal*/
+    inset-block-end: 50%;
+}
+/*
+Cabeceras de hora
+Definiremos los estilos de las horas del día que están ubicadas en la primer columna del calendario 
+hour-cell.css
+*/
