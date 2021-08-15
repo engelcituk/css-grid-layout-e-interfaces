@@ -18,6 +18,6 @@
 }
 
 .page .calendar {
-    border: 3px solid purple;
+    /* border: 3px solid purple; */
     grid-area: calendar;
 }

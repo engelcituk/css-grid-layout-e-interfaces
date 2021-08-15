@@ -1,0 +1,28 @@
+.currentTime {
+    /* border: 1px solid red; */
+    block-size: 2px; /*Height*/
+    background: var(--red10);
+    inline-size: 5rem;/*hay que indicar un tamaño, sino el elemento no se ve*/
+    /* width: 100%; */
+    position: absolute;
+    inset-inline-start: 450px; /*posición en el eje x o principal*/
+    inset-block-start: 590px; /*Posición en el eje y o transversal*/
+
+}
+
+/*pseudoelemento para agregar la bolita para la linea de genera la clase currentTime*/
+.currentTime::before{
+    content: "";
+    inline-size: 1rem;
+    block-size: 1rem;
+    background: var(--red10);
+    border-radius: 50%;
+    display: block; /* block hace que aparezca*/
+    transform: translateY(-50%); /*Muevo la bolita en el eje Y hacia arriba, si fuera 50% lo desplaza más abajo*/
+}
+
+/*
+Día y hora actual
+Este es el indicador rojo que nos dirá donde estamos ubicados en el calendario obedeciendo a la fecha y hora actual y se irá actualizando cada minuto.
+.current-time.css
+*/

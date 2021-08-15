@@ -17,7 +17,7 @@
     background: #c6dafb;
     padding: .25rem;
     margin-block-start: 1rem;
-    display: block; /*Lo vuelvo bloque y así ocupará toda la celda*/
+    display: block; /*Lo vuelvo bloque y así ocupará toda la celda, ademas de que block hace que aparezca*/
     border-radius: .25rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3)/*0 en el eje x, 0 en el eje y, spread de 10px y de color negra con opacidad del 30%*/
 }
