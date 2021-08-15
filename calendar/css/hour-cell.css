@@ -7,7 +7,6 @@
     font: var(--body3-regular);
     padding-inline-end: 1rem; /*Padding right logico*/
     position: relative; /*Para poder usarlo en el pseudoelemento que añade una rayita en el eje principal*/
-
 }
 
 /*
@@ -20,7 +19,7 @@ Pseudoelemento para poner una rayita en el eje principal
     background: currentColor;
     position: absolute; /*Esto hace que la rayita se aparezca, sino debido a que content no tienen valor no se ve*/
     inset-inline-end:0; /*Con esto lo muevo al derecha o final del eje principal*/
-    inset-block-end: 50%;
+    inset-block-end: 50%; /*Lo muevo en medio en */
 }
 /*
 Cabeceras de hora

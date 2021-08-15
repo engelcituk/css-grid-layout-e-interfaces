@@ -8,6 +8,8 @@
     align-items: flex-end; /*Para ubicarlo al final*/
     padding-inline-end: 1rem;
     white-space: nowrap; /*Para que el texto no rompa y se vaya la siguiente lìnea*/
+    background: var(--white); /*Para que al mover gracias al sticky no se solape con las celdas de horas*/
+    z-index: 2; /*Para que cubra las celdas de horas al hacer scroll y no parezca que se mezclen los textos*/
 }
 
 /*Pseudo elemento para agregar un guioncito a la celda*/
