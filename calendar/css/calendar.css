@@ -4,6 +4,8 @@
 @import './timezone-cell.css';
 @import './hour-cell.css';
 @import './current-time.css';
+@import './mini-calendar.css';
+
 
 .calendar{
     color:var(--gray20);

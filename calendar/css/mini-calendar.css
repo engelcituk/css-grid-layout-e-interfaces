@@ -1,0 +1,54 @@
+.miniCalendar{
+    /* border: 1px solid red; */
+    --cellSize: 1.75rem;
+    max-inline-size: 12.25rem; /*Medida máxima para el calendario mini, su max width*/
+}
+
+.miniCalendar-Date{
+    font: var(--body1-medium);
+}
+.miniCalendar-header{
+    display: grid;
+    grid-template-columns: repeat(7, var(--cellSize));
+    grid-template-rows: --cellSize;/*solo una fila*/
+    text-align: center;
+    font: var(--body3-regular);
+    line-height: var(--cellSize);
+    margin-block-end: .5rem;/*Margin en la parte inferior*/
+}
+.miniCalendar-status{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline-start: .25rem; /*Padding en sus extremo izq*/
+}
+
+.miniCalendar-month{
+    display: grid;
+    grid-template-columns: repeat(7, var(--cellSize)); /* 7 columnas*/
+    grid-template-rows: repeat(6, var(--cellSize)); /* 6 filas*/
+    text-align: center;
+    font: var(--body3-regular);
+    /* margin-block-start: 1rem; */
+}
+
+.miniCalendar-monthDay {
+    line-height: var(--cellSize);
+}
+
+.miniCalendar-monthDay.is-selected {
+    background: var(--blue10);
+    color: var(--white);
+    border-radius: 50px;
+}
+
+.miniCalendar-monthDay.is-inactive {
+    color: var(--gray20)
+}
+
+/*
+Mini Calendario
+
+Vamos a crear un mini calendario que se encargará de popular los datos de la página con los de la fecha seleccionada .mini-calendario.css
+
+*/

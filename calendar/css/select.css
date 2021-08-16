@@ -8,7 +8,7 @@
     appearance: none; /*Pierde el comportamiento del look and feel del select*/
     background-image: url('./../icons/chevron-down.svg');
     background-repeat: no-repeat; /*Para que no se vaya repetir el ícono constantemente*/
-    background-position: right center; /*eje x- eje y*/
+    background-position: right .5rem center; /*eje x- eje y*/
 }
 
 /*
