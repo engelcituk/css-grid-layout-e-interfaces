@@ -13,32 +13,38 @@
 <body>
     <div class="page">
         <header class="header">
-            <div class="calendarStatus">
-                <a href="#" class="button is-secondary" aria-label="Hoy" title="Hoy"><span>Hoy</span> </a>
-                <span class="calendarStatus-navigation">
-                    <a href="#" class="button is-compact" aria-label="Semana anterior" title="Semana Anterior">
-                        <i class="icon-chevron-left" aria-hidden="true"></i>
+            <div class="header-primary">
+                <div class="header-logo">
+                    <button class="button is-compact">
+                        <i class="icon-hamburguer-button"></i>
+                    </button>
+                    <a href="#" aria-current="page" aria-label="Calendar" tabindex="-1">
+                        <img src="./img/logo.png" alt="">
                     </a>
-                    <a href="#" class="button is-compact" aria-label="Siguiente semana" title="Siguiente semana">
-                        <i class="icon-chevron-right" aria-hidden="true"></i>
-                    </a>
-                </span>               
-                <time class="calendarStatus-date" datetime="15-08-2021">15 de agosto</time>
+                </div>
+                <div class="calendarStatus">
+                    <a href="#" class="button is-secondary" aria-label="Hoy" title="Hoy"><span>Hoy</span> </a>
+                    <span class="calendarStatus-navigation">
+                        <a href="#" class="button is-compact" aria-label="Semana anterior" title="Semana Anterior">
+                            <i class="icon-chevron-left" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="button is-compact" aria-label="Siguiente semana" title="Siguiente semana">
+                            <i class="icon-chevron-right" aria-hidden="true"></i>
+                        </a>
+                    </span>               
+                    <time class="calendarStatus-date" datetime="15-08-2021">15 de agosto</time>
+                </div>
             </div>
-            <select name="" id="" class="select">
-                <option value="" selected>Semana</option>
-                <option value="">Día</option>
-            </select>
-            <a href="#" class="button is-rounded is-shadowed">
-                <i class="icon-plus"></i> <span>Button</span> 
-            </a>
-            <a href="#" class="button is-compact">
-                <i class="icon-plus"></i>
-            </a>
-            <!-- <a href="#" class="button is-shadowed"><span>Button</span> </a> -->
-            <button class="button"><span>Button</span> </button>
-            <a href="#" class="button"><span>Button</span> </a>
-            <a href="#" class="button is-primary"><span>Button</span> </a>
+            <div class="header-secondary">
+                <select name="" id="" class="select">
+                    <option value="" selected>Semana</option>
+                    <option value="">Día</option>
+                </select>
+                <a href="#">
+                    <img src="./img/avatar.png" alt="img avatar">
+                </a>
+            </div>
+            
         </header>
         <div class="sidebar"></div>
         <main class="calendar">

@@ -1,5 +1,5 @@
 .select {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding-inline-start: 1rem; /*1 rem para sus extremo izq*/
     padding-block:.5rem; /*Padding del bloque, o arriba y abajo*/
     padding-inline-end: 2rem; /*2 rem para sus extremo der*/

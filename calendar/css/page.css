@@ -8,7 +8,7 @@
 }
 
 .page .header {
-    border: 3px solid blue;
+    /* border: 3px solid blue; */
     grid-area: header;
 }
 

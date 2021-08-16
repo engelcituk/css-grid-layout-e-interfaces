@@ -1,0 +1,32 @@
+.header {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1.5rem; /*Padding en los extremos izquierdo y derecho*/
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.header-primary {
+    display: flex;
+    align-content: center;
+    gap: 3rem;
+}
+
+.header-secondary{
+    display: flex;
+    align-content: center;
+    gap: 3rem;
+}
+
+/*
+Header
+
+Vamos a componer el área superior de nuestro proyecto, al propio estilo de flexbox
+.header.css
+
+*/
