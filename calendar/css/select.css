@@ -1,0 +1,18 @@
+.select {
+    border: 1px solid red;
+    padding-inline-start: 1rem; /*1 rem para sus extremo izq*/
+    padding-block:.5rem; /*Padding del bloque, o arriba y abajo*/
+    padding-inline-end: 2rem; /*2 rem para sus extremo der*/
+    border-radius: .25rem;
+    font: var(--button-button);
+    appearance: none; /*Pierde el comportamiento del look and feel del select*/
+    background-image: url('./../icons/chevron-down.svg');
+    background-repeat: no-repeat; /*Para que no se vaya repetir el ícono constantemente*/
+    background-position: right center; /*eje x- eje y*/
+}
+
+/*
+Selector multiusos
+Solo tenemos un selector en nuestro proyecto para el área de cambio de diseño a día, semana o mes.
+.select.css
+*/
