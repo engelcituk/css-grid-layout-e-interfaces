@@ -20,6 +20,23 @@
 }
 
 body {
-    /* font: var(--body1-regular); */
+    font: var(--body1-regular);
     /* color: var(--blue10); */
+    margin: 0;
+    color: var(--gray50);
+    background: var(--white);
 }
+
+@media(prefers-color-scheme: dark){
+    :root {
+        --gray50: #fffffe;
+        --gray20: #c1c1c1;
+        --white: #222222;
+    }
+}
+
+/*
+
+Dark Mode
+Con simples cambios de variables en un media query lograremos dar un buen look and feel de soporte a usuarios que prefieren una interfaz oscura.
+*/
