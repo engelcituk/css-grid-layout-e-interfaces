@@ -8,13 +8,11 @@
 @import './header.css';
 @import './sidebar.css';
 @import './modal.css';
-
-
-
+@import './input.css';
+@import './create-task.css';
 
 
 /*
 Exportando tipografía con Figma to CSS plugin
 Te presento el plugin que estoy creando (Beta) para ir tomando las cosas que previamente documentamos en Figma.
-
 */
