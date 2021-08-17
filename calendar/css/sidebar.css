@@ -1,0 +1,15 @@
+/*
+Sidebar
+Nuestra área de sidebar quedará muy bien proporcionada gracias a este contenedor
+.sidebar
+
+*/
+
+.sidebar {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start; /*Cuando flex direction esta en column, se ocupa align-items, sino sería justify-content*/
+    padding: 1.5rem;
+}
