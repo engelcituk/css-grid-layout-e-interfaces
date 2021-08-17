@@ -1,6 +1,7 @@
 .modal{
     /* border: 1px solid red;  */
-    display: flex;/*Es un contenedor flexible*/
+    /*Es un contenedor flexible*/
+    /* display: flex; */
     flex-direction: column; /*posiciona los flex items como columna o bloques*/
     gap: 1rem;
     max-inline-size: 28rem;
@@ -15,6 +16,10 @@
     padding-inline: 3rem; 
     padding-block: 1.5rem; 
 
+}
+/*Si modal tiene el atributo open*/
+.modal[open]{
+    display: flex;
 }
 
 /*Pseudoelemento*/
